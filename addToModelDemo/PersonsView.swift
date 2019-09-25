@@ -11,6 +11,14 @@ import SwiftUI
 struct PersonsView : View {
     @ObservedObject var store: PersonStore
     @Environment(\.managedObjectContext) var managedObjectContext
+//    var total = {(store:PersonStore) -> Int in
+//        var totalAmount = Int()
+//        ForEach(store.persons) { person in
+//            let Amount = person.price
+//        totalAmount = Amount
+//        }
+//        return totalAmount
+//    }
     var body: some View {
         NavigationView {
             VStack{
@@ -19,16 +27,16 @@ struct PersonsView : View {
                         NavigationLink(destination: EditingView(person: self.$store.persons[index])) {
                             Image(uiImage: UIImage(named: person.image)!)
                                 .resizable()
-                                .frame(width: 50, height: 50, alignment: .leading)
+                                .frame(width: 100, height: 100, alignment: .leading)
                             VStack(alignment: .leading) {
-                                HStack{
+                                VStack(alignment: .leading){
                                     Text(person.name)
                                         .font(.headline)
                                     Text("Total Amount : \(person.itemCount * person.price)")
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
-                                }
-                                HStack{
+//                                }
+//                                HStack{
                                     Text("Price: Rs \(person.price)")
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
@@ -39,8 +47,10 @@ struct PersonsView : View {
                             }
                         }
                     }
+                    .frame(height: 100, alignment: .leading)
                 }
-                Text("Grand Total :0")
+                
+                Text("Grand Total : 0 ")
             }
             .onAppear(perform: store.fetch)
             .navigationBarTitle(Text("Good Evening"))
