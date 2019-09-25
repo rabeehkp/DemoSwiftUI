@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PersonsView : View {
     @ObservedObject var store: PersonStore
+    @Environment(\.managedObjectContext) var managedObjectContext
     var body: some View {
         NavigationView {
             VStack{

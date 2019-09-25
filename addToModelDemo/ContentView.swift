@@ -9,23 +9,28 @@
 import SwiftUI
 
 struct ContentView: View {
+//    @Environment(\.managedObjectContext) var managedObjectContext
+//    var list : [AddList]
     var store = PersonStore()
     @State var numberOfItems = 0
     var body: some View {
 //        Text("Hello World")
 //        VStack{
 //            List{
-//                Stepper(value: $numberOfItems, in: 0...100) {
-//                    Text("Age: \(numberOfItems)")
+//                ForEach(list.indexed(),id: \.1.id){ listItem , index in
+////                    Text(listItem)
 //                }
-                PersonsView(store: store)
 //            }
+
+                PersonsView(store: store)
 //        }
+//        .onAppear(perform: list = AddList(context: self.managedObjectContext).fetchList() as! [AddList])
     }
+    
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

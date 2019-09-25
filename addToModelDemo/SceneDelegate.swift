@@ -28,7 +28,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
+//            guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else {
+//                fatalError("Unable to read managed object context.")
+//            }
+//
+//            window.rootViewController = UIHostingController(rootView: ContentView().environment(\.managedObjectContext, context))
         }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

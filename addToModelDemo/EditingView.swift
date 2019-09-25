@@ -13,8 +13,11 @@ struct EditingView: View {
     @Binding var person:Person
     var body: some View {
         Form{
-            Section(header: Text("Personal Information")) {
-                    
+            Section(header: Text("Add how many you want")) {
+                Image(uiImage: UIImage(named: person.image)!)
+                    .resizable()
+                    .frame(height:300,alignment:.bottomTrailing)
+//                    .frame(width: 200, height: 100, alignment: .bottomTrailing)
 //                    TextField("type something...",text:$person.name)
                     Stepper(value: $person.itemCount, in: 0...100) {
                     Text("Total Count: \(person.itemCount)")
@@ -22,11 +25,11 @@ struct EditingView: View {
                 
             }
             
-            Section{
-                Button("save"){
-                    self.presentation.wrappedValue.dismiss()
-                }
-            }
+//            Section{
+//                Button("save"){
+//                    self.presentation.wrappedValue.dismiss()
+//                }
+//            }
         }.navigationBarTitle(person.name)
     }
 }

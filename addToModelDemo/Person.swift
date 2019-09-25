@@ -25,18 +25,18 @@ final class PersonStore:ObservableObject{
     
     func fetch(){
         persons = [
-            .init(id: .init(), name: "Chai", itemCount: 0,price:10,image:"demo",total:0),
-            .init(id: .init(), name: "Cofee", itemCount: 0,price:20,image:"demo",total:0),
-            .init(id: .init(), name: "Boost", itemCount: 0,price:25,image:"demo",total:0),
-            .init(id: .init(), name: "Horlicks", itemCount: 0,price:25,image:"demo",total:0),
-            .init(id: .init(), name: "Samusa", itemCount: 0,price:10,image:"demo",total:0),
-            .init(id: .init(), name: "Paniyaram", itemCount: 0,price:15,image:"demo",total:0),
-            .init(id: .init(), name: "Green Tea", itemCount: 0,price:15,image:"demo",total:0),
-            .init(id: .init(), name: "Filter Cofee", itemCount: 0,price:25,image:"demo",total:0),
+            .init(id: .init(), name: "Chai", itemCount: 0,price:10,image:"Chai",total:0),
+            .init(id: .init(), name: "Cofee", itemCount: 0,price:20,image:"Coffee",total:0),
+            .init(id: .init(), name: "Boost", itemCount: 0,price:25,image:"Boost",total:0),
+            .init(id: .init(), name: "Horlicks", itemCount: 0,price:25,image:"Horlicks",total:0),
+            .init(id: .init(), name: "Samusa", itemCount: 0,price:10,image:"Samusa",total:0),
+            .init(id: .init(), name: "Paniyaram", itemCount: 0,price:15,image:"Paniyaram",total:0),
+            .init(id: .init(), name: "Green Tea", itemCount: 0,price:15,image:"Greentea",total:0),
+            .init(id: .init(), name: "Filter Cofee", itemCount: 0,price:25,image:"Filtercoffee",total:0),
             .init(id: .init(), name: "Biscut", itemCount: 0,price:10,image:"demo",total:0),
-            .init(id: .init(), name: "Milk", itemCount: 0,price:15,image:"demo",total:0),
-            .init(id: .init(), name: "Corn", itemCount: 0,price:25,image:"demo",total:0),
-            .init(id: .init(), name: "Lemon Tea", itemCount: 0,price:15,image:"demo",total:0),
+            .init(id: .init(), name: "Milk", itemCount: 0,price:15,image:"Milk",total:0),
+            .init(id: .init(), name: "Corn", itemCount: 0,price:25,image:"Corn",total:0),
+            .init(id: .init(), name: "Lemon Tea", itemCount: 0,price:15,image:"LemonTea",total:0),
         ]
     }
 }
