@@ -8,17 +8,18 @@
 
 import SwiftUI
 
-struct PersonsView : View {
+struct ListView : View {
     @ObservedObject var store: PersonStore
     @Environment(\.managedObjectContext) var managedObjectContext
-//    var total = {(store:PersonStore) -> Int in
-//        var totalAmount = Int()
-//        ForEach(store.persons) { person in
-//            let Amount = person.price
-//        totalAmount = Amount
-//        }
-//        return totalAmount
-//    }
+    
+    var total = {(store:PersonStore) -> Int in
+        var amount = store.persons.filter({$0.itemCount > 0})
+        var totalAmount = Int()
+        for i in amount{
+            totalAmount = totalAmount + (i.price * i.itemCount)
+        }
+        return totalAmount
+    }
     var body: some View {
         NavigationView {
             VStack{
@@ -43,18 +44,30 @@ struct PersonsView : View {
                                     Text("Total Count: \(person.itemCount)")
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
+                                    if person.desc != ""{
+                                    Text("Desc: \(person.desc)")
+                                    }
                                 }
                             }
                         }
                     }
                     .frame(height: 100, alignment: .leading)
                 }
+                NavigationLink(destination: SummeryView(store:self.store,total:self.total(self.store))) {
+//                    Text("Grand Total : \(total(self.store)) ")
+                        Text("Summery")
+                            .foregroundColor(.red)
+                            .frame(height:30)
+                }
                 
-                Text("Grand Total : 0 ")
             }
             .onAppear(perform: store.fetch)
+            .foregroundColor(.green)
             .navigationBarTitle(Text("Good Evening"))
+                
+            
         }
+        
         //.onAppear(perform: store.fetch)
     }
 }

@@ -18,7 +18,7 @@ struct EditingView: View {
                     .resizable()
                     .frame(height:300,alignment:.bottomTrailing)
 //                    .frame(width: 200, height: 100, alignment: .bottomTrailing)
-//                    TextField("type something...",text:$texts)
+                TextField("type something...",text:$person.desc)
                     Stepper(value: $person.itemCount, in: 0...100) {
                     Text("Total Count: \(person.itemCount)")
                     }

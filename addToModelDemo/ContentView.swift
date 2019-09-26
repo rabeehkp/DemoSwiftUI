@@ -22,7 +22,7 @@ struct ContentView: View {
 //                }
 //            }
 
-        PersonsView(store: store)
+        ListView(store: store)
 //        }
 //        .onAppear(perform: list = AddList(context: self.managedObjectContext).fetchList() as! [AddList])
     }
