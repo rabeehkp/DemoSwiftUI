@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ListView : View {
     @ObservedObject var store: PersonStore
-    @Environment(\.managedObjectContext) var managedObjectContext
+//    @Environment(\.managedObjectContext) var managedObjectContext
     
     var total = {(store:PersonStore) -> Int in
         var amount = store.persons.filter({$0.itemCount > 0})

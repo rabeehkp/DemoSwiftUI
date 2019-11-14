@@ -9,6 +9,12 @@
 import SwiftUI
 
 struct SummeryView: View {
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(fetchRequest: AddItem.getAllToDoItem()) var toDoItems:FetchedResults<AddItem>
+    
+    @State private var list = Data()
+    
     @ObservedObject var store: PersonStore
     var total = Int()
     var updatedLists = {(store:PersonStore) -> [Person] in
@@ -42,6 +48,28 @@ struct SummeryView: View {
                     .font(.headline)
                     .foregroundColor(.red)
                     .frame(height:30)
+                
+                Button(action: {
+                    let addItem = AddItem(context: self.managedObjectContext)
+                    
+//                    let jsonData = try JSONSerialization.data(withJSONObject: store, options: .prettyPrinted)
+//
+//                    let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
+                    
+                    
+//                    addItem.list = jsonData
+                    addItem.createdAt = Date()
+                    
+                    do{
+                        try self.managedObjectContext.save()
+                    }catch{
+                        print(error)
+                    }
+                    
+                    
+                }){
+                    Text("Save")
+                }
             }else{
                 Text("Its Empty")
             }

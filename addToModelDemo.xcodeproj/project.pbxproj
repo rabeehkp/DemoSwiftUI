@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD500CDD237D35DC00E5937C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD500CDC237D35DC00E5937C /* HomeView.swift */; };
+		AD500CDF237D47A000E5937C /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD500CDE237D47A000E5937C /* AddItem.swift */; };
+		AD500CE2237D627D00E5937C /* AddList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD500CE0237D627D00E5937C /* AddList+CoreDataClass.swift */; };
+		AD500CE3237D627D00E5937C /* AddList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD500CE1237D627D00E5937C /* AddList+CoreDataProperties.swift */; };
 		ADB5A022233CE93400055D4A /* SummeryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5A021233CE93400055D4A /* SummeryView.swift */; };
 		ADF143F3233B30A200EBE3CC /* demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADF143F1233B30A200EBE3CC /* demo.xcdatamodeld */; };
-		ADF143F6233B318500EBE3CC /* AddList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF143F4233B318500EBE3CC /* AddList+CoreDataClass.swift */; };
-		ADF143F7233B318500EBE3CC /* AddList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF143F5233B318500EBE3CC /* AddList+CoreDataProperties.swift */; };
 		ADF143F9233B372600EBE3CC /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF143F8233B372600EBE3CC /* AddListView.swift */; };
 		F9A0F497233A449F007C4AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0F496233A449F007C4AAC /* AppDelegate.swift */; };
 		F9A0F499233A449F007C4AAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A0F498233A449F007C4AAC /* SceneDelegate.swift */; };
@@ -24,10 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD500CDC237D35DC00E5937C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AD500CDE237D47A000E5937C /* AddItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
+		AD500CE0237D627D00E5937C /* AddList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AD500CE1237D627D00E5937C /* AddList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ADB5A021233CE93400055D4A /* SummeryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummeryView.swift; sourceTree = "<group>"; };
 		ADF143F2233B30A200EBE3CC /* demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = demo.xcdatamodel; sourceTree = "<group>"; };
-		ADF143F4233B318500EBE3CC /* AddList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddList+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		ADF143F5233B318500EBE3CC /* AddList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddList+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		ADF143F8233B372600EBE3CC /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
 		F9A0F493233A449F007C4AAC /* addToModelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = addToModelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9A0F496233A449F007C4AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,8 +76,7 @@
 		F9A0F495233A449F007C4AAC /* addToModelDemo */ = {
 			isa = PBXGroup;
 			children = (
-				ADF143F4233B318500EBE3CC /* AddList+CoreDataClass.swift */,
-				ADF143F5233B318500EBE3CC /* AddList+CoreDataProperties.swift */,
+				AD500CDE237D47A000E5937C /* AddItem.swift */,
 				F9A0F496233A449F007C4AAC /* AppDelegate.swift */,
 				F9A0F498233A449F007C4AAC /* SceneDelegate.swift */,
 				F9A0F49A233A449F007C4AAC /* ContentView.swift */,
@@ -82,8 +85,11 @@
 				F9A0F4AE233A4AFD007C4AAC /* EditingView.swift */,
 				ADB5A021233CE93400055D4A /* SummeryView.swift */,
 				ADF143F8233B372600EBE3CC /* AddListView.swift */,
+				AD500CDC237D35DC00E5937C /* HomeView.swift */,
 				F9A0F49C233A44A7007C4AAC /* Assets.xcassets */,
 				F9A0F4A1233A44A7007C4AAC /* LaunchScreen.storyboard */,
+				AD500CE0237D627D00E5937C /* AddList+CoreDataClass.swift */,
+				AD500CE1237D627D00E5937C /* AddList+CoreDataProperties.swift */,
 				ADF143F1233B30A200EBE3CC /* demo.xcdatamodeld */,
 				F9A0F4A4233A44A7007C4AAC /* Info.plist */,
 				F9A0F49E233A44A7007C4AAC /* Preview Content */,
@@ -171,16 +177,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A0F497233A449F007C4AAC /* AppDelegate.swift in Sources */,
+				AD500CDF237D47A000E5937C /* AddItem.swift in Sources */,
 				F9A0F4AD233A48C8007C4AAC /* ListView.swift in Sources */,
 				ADB5A022233CE93400055D4A /* SummeryView.swift in Sources */,
 				F9A0F499233A449F007C4AAC /* SceneDelegate.swift in Sources */,
 				ADF143F3233B30A200EBE3CC /* demo.xcdatamodeld in Sources */,
+				AD500CE3237D627D00E5937C /* AddList+CoreDataProperties.swift in Sources */,
 				ADF143F9233B372600EBE3CC /* AddListView.swift in Sources */,
+				AD500CE2237D627D00E5937C /* AddList+CoreDataClass.swift in Sources */,
 				F9A0F4AF233A4AFD007C4AAC /* EditingView.swift in Sources */,
 				F9A0F4AB233A44D1007C4AAC /* Person.swift in Sources */,
-				ADF143F7233B318500EBE3CC /* AddList+CoreDataProperties.swift in Sources */,
+				AD500CDD237D35DC00E5937C /* HomeView.swift in Sources */,
 				F9A0F49B233A449F007C4AAC /* ContentView.swift in Sources */,
-				ADF143F6233B318500EBE3CC /* AddList+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

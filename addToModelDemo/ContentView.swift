@@ -22,7 +22,10 @@ struct ContentView: View {
 //                }
 //            }
 
-        ListView(store: store)
+//        ListView(store: store)
+        
+        
+        
 //        }
 //        .onAppear(perform: list = AddList(context: self.managedObjectContext).fetchList() as! [AddList])
     }
